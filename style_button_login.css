@@ -1,0 +1,42 @@
+/* --- ESCONDER NAVEGAÇÃO LATERAL SE NÃO ESTIVER LOGADO --- */
+[data-testid="stSidebarNav"] {
+    display: none;
+}
+
+/* --- ESTILIZAÇÃO DO CONTAINER DO FORMULÁRIO --- */
+[data-testid="stForm"] {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
+    background-color: #ffffff;
+}
+
+/* --- ESTILIZAÇÃO DOS INPUTS --- */
+div[data-baseweb="input"] {
+    border-radius: 8px !important;
+}
+
+/* --- ESTILIZAÇÃO DO BOTÃO ENTRAR --- */
+div.stFormSubmitButton > button {
+    width: 100% !important;
+    background-color: #10b981 !important; /* Verde Emerald */
+    color: white !important;
+    font-weight: 600 !important;
+    font-size: 1rem !important;
+    border-radius: 8px !important;
+    border: none !important;
+    padding: 0.6rem 1rem !important;
+    transition: all 0.2s ease-in-out !important;
+    cursor: pointer !important;
+}
+
+div.stFormSubmitButton > button:hover {
+    background-color: #059669 !important; /* Verde mais escuro no hover */
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.25) !important;
+    transform: translateY(-1px);
+}
+
+div.stFormSubmitButton > button:active {
+    transform: translateY(0);
+}
