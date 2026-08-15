@@ -9,7 +9,7 @@ def check_login():
         
         # Opção 1: Botão de redirecionamento automático nativo
         if st.button("Ir para o Login"):
-            st.switch_page("app.py")  # Altere para o caminho da sua página principal/login
+            st.switch_page("./1_🗝️_login.py")
         
         # Interrompe o carregamento do restante da página
         st.stop()
