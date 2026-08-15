@@ -21,14 +21,14 @@ def process_data(df: pd.DataFrame) -> pd.DataFrame:
 
     # Padronização amigável de nomes-chave de colunas
     renomear = {
-        'veiculo_motorista': 'motorista',
-        'veículo_motorista': 'motorista',
+        'veiculo__motorista': 'motorista',
+        'veículo__motorista': 'motorista',
         'data_saida': 'data_saída'
     }
     df = df.rename(columns={k: v for k, v in renomear.items() if k in df.columns})
     
     # Lista de colunas de texto para higienização
-    text_cols = ['cliente', 'veículo___motorista', 'tipo', 'status', 'obs']
+    text_cols = ['cliente', 'motorista', 'tipo', 'status', 'obs']
     
     for col in text_cols:
         if col in df.columns:
