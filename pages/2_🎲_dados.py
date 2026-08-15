@@ -37,11 +37,7 @@ with st.sidebar:
             
         except Exception as e:
             st.sidebar.error(f"Erro ao processar arquivo: {e}")
-            
-    st.divider()
-    if st.button("🚪 Sair", type="secondary"):
-        st.session_state.clear()
-        st.switch_page("1_login.py")
+    
 
 # 3. Exibição dos Dados na Página Principal
 if 'df_Bi_Roteirizacao' in st.session_state and not st.session_state['df_Bi_Roteirizacao'].empty:
@@ -51,3 +47,8 @@ if 'df_Bi_Roteirizacao' in st.session_state and not st.session_state['df_Bi_Rote
     st.dataframe(df, width='stretch')
 else:
     st.info("👈 Por favor, faça o upload de uma planilha no menu lateral para visualizar as entregas e gerar a rota.")
+
+with st.sidebar:
+    if st.button("🚪 Sair da Conta", use_container_width=True, type="primary"):
+        st.session_state.clear()
+        st.switch_page("./1_🗝️_login.py")
