@@ -80,3 +80,4 @@ with col_motoristas:
             value=m['total_motoristas'],
             gradient="#4338ca, #6366f1"
         )
+

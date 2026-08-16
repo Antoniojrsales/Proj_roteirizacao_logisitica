@@ -21,8 +21,8 @@ def process_data(df: pd.DataFrame) -> pd.DataFrame:
 
     # Padronização amigável de nomes-chave de colunas
     renomear = {
-        'veiculo__motorista': 'motorista',
-        'veículo__motorista': 'motorista',
+        'veículo___motorista': 'motorista',
+        'veículo___motorista': 'motorista',
         'data_saida': 'data_saída'
     }
     df = df.rename(columns={k: v for k, v in renomear.items() if k in df.columns})
